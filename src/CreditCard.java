@@ -1,4 +1,3 @@
-
 public class CreditCard extends Card {
     private static boolean instance_flag = false;
 

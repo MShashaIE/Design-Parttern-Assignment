@@ -139,8 +139,10 @@ public class AccountGUI implements ActionListener, ListSelectionListener {
         if (!listAccounts.isSelectionEmpty()) {
             for (AccountInterface account : user.getAccounts()) {
                 if (account.getAccountNumber() == Integer.parseInt((String) listAccounts.getSelectedValue())) {
-                    return account;
+                   return account;
+
                 }
+
             }
         }
         return null;

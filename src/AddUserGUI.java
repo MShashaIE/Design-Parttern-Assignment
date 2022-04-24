@@ -1,5 +1,4 @@
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Objects;
@@ -11,7 +10,7 @@ public class AddUserGUI implements ActionListener {
     JFrame frame;
 
     public AddUserGUI() {
-        frame = new JFrame("Create Account");
+        frame = new JFrame("Create New User");
         frame.setContentPane(panel1);
         frame.pack();
         createUserButton.addActionListener(this);

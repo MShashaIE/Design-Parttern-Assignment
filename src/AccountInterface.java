@@ -1,19 +1,27 @@
 import java.util.LinkedList;
 
 public interface AccountInterface {
-    public void deposit(double amount);
+    void deposit(double amount);
 
-    public boolean withdraw(double amount) throws Exception;
+    boolean withdraw(double amount) throws Exception;
 
-    public int getAccountNumber();
+    int getAccountNumber();
 
-    public String getAccountType();
+    String getAccountType();
 
-    public double getBalance();
+    String getUser();
+
+    double getBalance();
+    double getAmount();
 
 
     void setCard(Card card);
 
     LinkedList<Card> getCards();
+
+
+    void registerObserver(Observer o);
+
+    void notifyObservers();
 }
 

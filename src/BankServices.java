@@ -1,17 +1,18 @@
+import java.util.ArrayList;
 import java.util.Hashtable;
-import java.util.Map;
 
 public class BankServices {
     private final Hashtable<Integer, Double> bankAccount;
     private AccountInterface checkingAccount;
     private AccountInterface savingAccount;
-
+    private ArrayList<Observer> observers;
+    public String event;
 
     public BankServices () {
         this.bankAccount = new Hashtable<Integer, Double>();
     }
 
-    public AccountInterface createNewAccount (String type,String owner) {
+    public AccountInterface createNewAccount (String type, String owner) {
 
         switch (type) {
             case "Checking Account" -> {
@@ -23,7 +24,7 @@ public class BankServices {
                 this.savingAccount = new SavingAccount(owner);
                 this.bankAccount.put(this.savingAccount.getAccountNumber(), this.savingAccount.getBalance());
                 return this.savingAccount;
-            }
+          }
         }
         return null;
     }
